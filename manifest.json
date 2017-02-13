@@ -1,0 +1,19 @@
+{
+	"name": "NewT",
+	"version": "0.0.3",
+	"manifest_version": 2,
+	"description": "NewT(ab), a totally free and open source new tab page built for Chrome!",
+	"homepage_url": "http://newtapp.com",
+	"icons": {
+		"16": "icons/icon16.png",
+		"48": "icons/icon48.png",
+		"128": "icons/icon128.png"
+	},
+	"default_locale": "en",
+	"chrome_url_overrides": {
+		"newtab": "src/override/newt.html"
+	},
+	"permissions": [
+		"*://*/*"
+	]
+}
