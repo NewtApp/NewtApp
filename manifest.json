@@ -11,7 +11,7 @@
 	},
 	"default_locale": "en",
 	"chrome_url_overrides": {
-		"newtab": "newt.html"
+		"newtab": "index.html"
 	},
 	"permissions": [
 		"chrome://favicon/"
