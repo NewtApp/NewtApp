@@ -1,1 +1,1 @@
-$(document).ready(function(){$("html").hide().fadeIn(1000);});
+$(document).ready(function(){$("html").hide().fadeIn(2000);});
