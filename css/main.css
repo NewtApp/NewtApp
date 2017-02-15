@@ -1,0 +1,32 @@
+body {
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+html {
+margin: 0;
+}
+
+body {
+margin: 0;
+}
+
+#time {
+  z-index: 9999;
+  text-align: center;
+  padding-top:50vh;
+  transform: translateY(-100px);
+}
+
+#timeText {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100px;
+  color:white;
+}
+
+#dayText {
+  font-family: 'Roboto', sans-serif;
+  color:white;
+  font-size: 30px;
+  padding-left: 5px
+}
