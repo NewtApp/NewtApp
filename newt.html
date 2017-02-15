@@ -10,11 +10,18 @@
 </head>
 <body background="assets/wallpaper.jpg">
 	<div>
-		<div id="time">
+		<div id="time" class="noselect">
 			<div style="display:inline-block">
 			<h1><a id="timeText"></a></h1></div>
-				<a id="dayText"></a>
+				<a id="dayText">...</a>
 	  </div>
+      <form method="get" action="https://www.google.com/search">
+        <div id="searchbar">
+          <img src="assets/search.png" id="searchicon">
+          <input type="text" name="q" size="100" value="" placeholder="Search Google..." class="search nomargin" autocomplete="off">
+          <hr class="inputline">
+        </div>
+      </form>
 	</div>
 </body>
 </html>

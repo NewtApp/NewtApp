@@ -12,21 +12,64 @@ margin: 0;
 }
 
 #time {
-  z-index: 9999;
   text-align: center;
-  padding-top:50vh;
-  transform: translateY(-100px);
+  padding-top:33vh;
+}
+
+.inputline {
+    color: white;
+    margin-top: -8px;
+    width: 30%;
 }
 
 #timeText {
   font-family: 'Open Sans', sans-serif;
-  font-size: 100px;
+  font-size: 150px;
   color:white;
 }
 
 #dayText {
   font-family: 'Roboto', sans-serif;
   color:white;
-  font-size: 30px;
+  font-size:45px;
   padding-left: 5px
+}
+
+.nomargin {
+    margin: 0;
+}
+
+.noselect {
+  cursor:default;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+#searchbar {
+    text-align: center;
+}
+
+.search {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    outline: none;
+    height: 50px;
+    font-size: 28px;
+    transition: height 1s;
+    -webkit-transition: height 1s;
+    width: 35%;
+    margin-left: -27%;
+}
+
+#searchicon {
+    float: left;
+    width: 35px;
+    margin-left: 35%;
+    margin-top: 8px;
 }
