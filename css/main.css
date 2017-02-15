@@ -11,6 +11,10 @@ body {
 margin: 0;
 }
 
+#timeToggle {
+  cursor: pointer;
+}
+
 #time {
   text-align: center;
   padding-top:35vh;
