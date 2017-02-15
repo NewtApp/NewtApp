@@ -1,6 +1,7 @@
 body {
   overflow: hidden;
   background-repeat: no-repeat;
+  text-align: center;
 }
 
 html {
@@ -69,3 +70,6 @@ margin: 0;
     margin-left: 35%;
     margin-top: 8px;
 }
+#timeToggle {
+  display: inline-block
+ }
