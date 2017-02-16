@@ -4,7 +4,7 @@ body {
   background-repeat: no-repeat;
   text-align: center;
   background-color: #EEEEEE;
-  background-image: url("https://source.unsplash.com/category/nature/1920x1080/daily")
+  background-image: url("assets/wallpaper.jpg")
 }
 
 ::-webkit-input-placeholder {
