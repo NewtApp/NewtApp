@@ -90,9 +90,9 @@ margin: 0;
 
 #searchicon {
     position:absolute;
-    bottom:8px;
+    bottom:11px;
     left:10px;
-    width:35px;
+    width:34px;
     cursor: pointer;
     user-drag: none;
     -webkit-user-drag: none;

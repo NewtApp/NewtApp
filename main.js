@@ -123,11 +123,15 @@ window.onload = function(){
     GetClock();
 
     $(".search").focus(function(event) {
+        $(".inputline").css({"visibility":"visible"});
         $(".inputline").hide().fadeIn(500);
     });
 
     $(".search").focusout(function(event) {
-        $(".inputline").fadeOut(500);
+        $(".inputline").fadeOut(500, function () {
+            "display", "block"
+            "visibility", "hidden"
+        });
     });
 
     // Update time/date every second
