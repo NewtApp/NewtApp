@@ -2,6 +2,8 @@ body {
   overflow: hidden;
   background-repeat: no-repeat;
   text-align: center;
+  background-color: whitesmoke;
+  background-image: url("https://source.unsplash.com/category/nature/1920x1080/daily")
 }
 
 ::-webkit-input-placeholder {
@@ -22,7 +24,7 @@ margin: 0;
 
 #time {
   text-align: center;
-  padding-top:35vh;
+  padding-top:30vh;
 }
 
 .inputline {
@@ -33,7 +35,7 @@ margin: 0;
 
 #timeText {
   font-family: 'Open Sans', sans-serif;
-  font-size: 150px;
+  font-size: 175px;
   color:white;
   display:inline-block;
 }
@@ -41,7 +43,7 @@ margin: 0;
 #dayText {
   font-family: 'Roboto', sans-serif;
   color:white;
-  font-size:45px;
+  font-size:55px;
   padding-left: 5px;
   display:inline-block;
 }
