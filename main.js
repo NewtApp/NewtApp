@@ -20,7 +20,7 @@ function setBackground() {
     function processRequest(e) {
       if (xhr.readyState == 4) {
         if (xhr.status >= 200 && xhr.status < 304) {
-          return;
+          $('body').css("background-image","url('https://source.unsplash.com/category/nature/1920x1080/daily')");
         } else {
           $('body').css("background-image","url('/assets/wallpaper.jpg')");
         }
@@ -34,11 +34,11 @@ function getDayTime() {
     var syshour = sysdate.getHours(),
         ap;
     if (syshour < 12) {
-        $('.search').attr("placeholder" , "Good Morning, " + global.name.name + "!");
+        $('.search').attr("placeholder" , "Good morning, " + global.name.name + ".");
     } else if (syshour < 18) {
-        $('.search').attr("placeholder" , "Good Afternoon, " + global.name.name + "!");
+        $('.search').attr("placeholder" , "Good afternoon, " + global.name.name + ".");
     } else {
-        $('.search').attr("placeholder" , "Good Evening, " + global.name.name + "!");
+        $('.search').attr("placeholder" , "Good evening, " + global.name.name + ".");
     }
 }
 
@@ -70,6 +70,18 @@ function GetClock() {
     $('#timeText').html(nhour + ":" + nmin);
     $('#dayText').html(ap);
 }
+
+$(".search").focus(function(event) {
+    $(".inputline").css({"visibility":"visible"});
+    $(".inputline").hide().fadeIn(500);
+});
+
+$(".search").focusout(function(event) {
+    $(".inputline").fadeOut(500, function () {
+        "display", "block"
+        "visibility", "hidden"
+    });
+});
 
 // Show month & date
 function showMonth() {
@@ -132,11 +144,11 @@ window.onload = function(){
     $("#timeToggle").click(function() {
         if (toggle == "12h") {
             showMonth();
-            $("#timeToggle").hide().fadeIn(500);
+            $("#timeToggle").finish().hide().fadeIn(500);
         }
         else {
             GetClock();
-            $("#timeToggle").hide().fadeIn(500);
+            $("#timeToggle").finish().hide().fadeIn(500);
         }
     });
 
@@ -147,18 +159,6 @@ window.onload = function(){
 
     GetClock();
     setBackground();
-
-    $(".search").focus(function(event) {
-        $(".inputline").css({"visibility":"visible"});
-        $(".inputline").hide().fadeIn(500);
-    });
-
-    $(".search").focusout(function(event) {
-        $(".inputline").fadeOut(500, function () {
-            "display", "block"
-            "visibility", "hidden"
-        });
-    });
 
     // Update time/date every second
     setInterval(whatami, 1000);
