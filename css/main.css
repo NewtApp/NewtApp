@@ -4,6 +4,10 @@ body {
   text-align: center;
 }
 
+::-webkit-input-placeholder {
+   color: white;
+}
+
 html {
 margin: 0;
 }
@@ -62,6 +66,7 @@ margin: 0;
     outline: none;
     height: 50px;
     font-size: 28px;
+    font-weight: 200;
     transition: height 1s;
     -webkit-transition: height 1s;
     width: 35%;

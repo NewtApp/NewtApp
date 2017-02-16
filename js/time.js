@@ -1,5 +1,5 @@
 var tday = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
-var tmonth = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+var tmonth = new Array("January", "Febuary", "Marvh", "April", "May", "Junr", "July", "August", "September", "October", "November", "December");
 toggle = "12h"
 //var secondcount = 0
 
@@ -35,11 +35,14 @@ function get24h() {
     toggle = "24h"
     var d = new Date();
     var nday = d.getDay();
+    var day = d.getDate();
+    var nmonth = d.getMonth();
+    var month = nmonth + 1
     var tfhHours = d.getHours();
     var tfhMins = d.getMinutes();
     var tfhMinutes = ("0" + tfhMins).slice(-2);
-    $('#timeText').html(tfhHours + ":" + tfhMinutes);
-    $('#dayText').html(tday[nday]);
+    $('#timeText').html(day);
+    $('#dayText').html(tmonth[nmonth]);
 }
 
 function whatami() {
@@ -58,10 +61,10 @@ function whatami() {
 $(document).ready(function(){
   $("#timeToggle").click(function() {
     if (toggle == "12h") {
-      get24h()
+      get24h();
     }
     else {
-      GetClock()
+      GetClock();
     }
   });
 });
