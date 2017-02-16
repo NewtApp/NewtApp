@@ -146,7 +146,7 @@ window.onload = function(){
     });
 
     GetClock();
-    setBackground();
+    //setBackground();
 
     $(".search").focus(function(event) {
         $(".inputline").css({"visibility":"visible"});
