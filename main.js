@@ -114,6 +114,11 @@ window.onload = function(){
             GetClock();
         }
     });
+
+    $("#searchicon").click(function() {
+        $(".search").focus();
+    });
+
     GetClock();
 
     $(".search").focus(function(event) {
