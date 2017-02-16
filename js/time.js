@@ -1,5 +1,5 @@
 var tday = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
-var tmonth = new Array("January", "Febuary", "Marvh", "April", "May", "Junr", "July", "August", "September", "October", "November", "December");
+var tmonth = new Array("January", "February", "Marvh", "April", "May", "Junr", "July", "August", "September", "October", "November", "December");
 toggle = "12h"
 //var secondcount = 0
 
