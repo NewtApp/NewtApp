@@ -85,6 +85,7 @@ margin: 0;
     transition: height 1s;
     -webkit-transition: height 1s;
     width: calc(100% - 90px);;
+    -webkit-user-select: none;
 }
 
 #searchicon {

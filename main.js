@@ -116,6 +116,7 @@ window.onload = function(){
     });
 
     $("#searchicon").click(function() {
+        $(".search").attr('disabled', false)
         $(".search").focus();
     });
 
@@ -128,6 +129,7 @@ window.onload = function(){
     $(".search").focusout(function(event) {
         $(".inputline").fadeOut(500);
     });
+
     // Update time/date every second
     setInterval(whatami, 1000);
 }
