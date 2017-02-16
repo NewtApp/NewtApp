@@ -86,12 +86,13 @@ margin: 0;
     -webkit-transition: height 1s;
     width: calc(100% - 90px);;
     -webkit-user-select: none;
+    transform: translateX(17px)
 }
 
 #searchicon {
     position:absolute;
     bottom:11px;
-    left:10px;
+    left:27px;
     width:34px;
     cursor: pointer;
     user-drag: none;
