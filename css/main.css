@@ -1,5 +1,6 @@
 body {
   overflow: hidden;
+  visibility: hidden;
   background-repeat: no-repeat;
   text-align: center;
   background-color: whitesmoke;
@@ -31,10 +32,11 @@ margin: 0;
     color: white;
     margin-top: -8px;
     width: 30%;
+    display: none;
 }
 
 #timeText {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 175px;
   color:white;
   display:inline-block;
@@ -67,6 +69,7 @@ margin: 0;
     border: none;
     outline: none;
     height: 50px;
+    font-family: 'Open-Sans', sans-serif;
     font-size: 28px;
     font-weight: 200;
     transition: height 1s;
