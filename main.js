@@ -5,6 +5,29 @@ var tmonth = new Array("January", "February", "Marvh", "April", "May", "June", "
 toggle = "12h"
 var nameChecked = false
 
+// Check for internet connection
+
+function setBackground() {
+    var xhr = new XMLHttpRequest();
+    var file = "https://varvy.com/pagespeed/wicked-fast.html";
+    var randomNum = Math.round(Math.random() * 10000);
+ 
+    xhr.open('HEAD', file + "?rand=" + randomNum, true);
+    xhr.send();
+     
+    xhr.addEventListener("readystatechange", processRequest, false);
+ 
+    function processRequest(e) {
+      if (xhr.readyState == 4) {
+        if (xhr.status >= 200 && xhr.status < 304) {
+          return;
+        } else {
+          $('body').css("background-image","url('/assets/wallpaper.jpg')");
+        }
+      }
+    }
+}
+
 // Find if it's Morning, afternoon or evening
 function getDayTime() {
     var sysdate = new Date();
@@ -123,6 +146,7 @@ window.onload = function(){
     });
 
     GetClock();
+    setBackground();
 
     $(".search").focus(function(event) {
         $(".inputline").css({"visibility":"visible"});
