@@ -94,10 +94,12 @@ window.onload = function(){
     chrome.storage.sync.get("name", function(data){
         global.name = data
         console.log(global.name)
-        if(global.name == null || global.name == undefined) {
+        if(global.name.name == null || global.name.name == undefined) {
         var name = prompt("What is your name?");
         chrome.storage.sync.set({'name': name})
-        }
+        chrome.storage.sync.get("name", function(data){
+            global.name = data
+        })};
         console.log("Hello, " + global.name.name + "!")
         getDayTime();
         nameChecked = true;
