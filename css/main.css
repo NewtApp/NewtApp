@@ -68,7 +68,7 @@ margin: 0;
     text-align: center;
     position:relative;
     display:inline-block;
-    width:30%;
+    width:500px;
     padding:0;
 }
 
@@ -80,7 +80,7 @@ margin: 0;
     outline: none;
     height: 50px;
     font-family: 'Open-Sans', sans-serif;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: 200;
     transition: height 1s;
     -webkit-transition: height 1s;

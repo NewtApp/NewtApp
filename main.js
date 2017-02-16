@@ -109,9 +109,11 @@ window.onload = function(){
     $("#timeToggle").click(function() {
         if (toggle == "12h") {
             showMonth();
+            $("#timeToggle").hide().fadeIn(500);
         }
         else {
             GetClock();
+            $("#timeToggle").hide().fadeIn(500);
         }
     });
 
