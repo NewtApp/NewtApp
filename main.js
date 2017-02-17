@@ -71,18 +71,6 @@ function GetClock() {
     $('#dayText').html(ap);
 }
 
-$(".search").focus(function(event) {
-    $(".inputline").css({"visibility":"visible"});
-    $(".inputline").hide().fadeIn(500);
-});
-
-$(".search").focusout(function(event) {
-    $(".inputline").fadeOut(500, function () {
-        "display", "block"
-        "visibility", "hidden"
-    });
-});
-
 // Show month & date
 function showMonth() {
     if (nameChecked == true){
@@ -140,6 +128,9 @@ window.onload = function(){
         nameChecked = true;
     });
 
+    GetClock();
+    setBackground();
+
     // If time is clicked, change to date
     $("#timeToggle").click(function() {
         if (toggle == "12h") {
@@ -153,13 +144,21 @@ window.onload = function(){
     });
 
     $("#searchicon").click(function() {
-        $(".search").attr('disabled', false)
-        $(".search").focus();
+    $(".search").attr('disabled', false)
+    $(".search").focus();
     });
 
-    GetClock();
-    setBackground();
+    $(".search").focus(function(event) {
+        $(".inputline").css({"visibility":"visible"});
+        $(".inputline").stop().hide().fadeIn(500);
+    });
+
+    $(".search").focusout(function(event) {
+        $(".inputline").finish().fadeOut(500, function () {
+            $(".inputline").css("display", "block");
+            $(".inputline").css("visibility", "hidden");
+        })});
 
     // Update time/date every second
     setInterval(whatami, 1000);
-}
+    }

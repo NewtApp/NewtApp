@@ -40,9 +40,9 @@ margin: 0;
 
 .inputline {
     color: white;
-    margin-top: -8px;
+    margin-top: -5px;
     width: 100%;
-    display: none;
+    visibility: hidden;
 }
 
 #timeText {
