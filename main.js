@@ -99,19 +99,19 @@ function whatami() {
   }
 }
 
-// Load the searchbar
-function fsearch() {
-        setTimeout(function(){
-        $("#searchbar").css("visibility","visible");
-        $("#searchbar").hide().fadeIn(1000);
-    }, 500);
+
+var something = function() {
+    return 2;
 }
 
 // Start loading
 window.onload = function(){
     $("#timeToggle").css("visibility","visible");
     $("#timeToggle").hide().fadeIn(1000);
-    fsearch();
+    setTimeout(function(){
+        $("#searchbar").css("visibility","visible");
+        $("#searchbar").hide().fadeIn(1000);
+    }, 500);
 
     // Check if username is saved
     chrome.storage.sync.get("name", function(data){
