@@ -1,0 +1,48 @@
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    text-align: center;
+    background-color: #757575;
+    color: white;
+}
+
+.nomargin {
+    margin: 0;
+    padding: 0;
+}
+
+#background {
+    height:100%;
+    width:100%;
+    position: absolute;
+}
+
+#bgimage {
+    height:100%;
+    width:100%;
+    position: absolute;
+}
+
+#container {
+    text-align: center;
+    margin-top:50vh;
+    display: inline-block
+}
+
+#main {
+    font-family: 'Roboto', sans-serif;
+    font-size: 75px;
+    transform: translateY(-75px)
+}
+
+#response {
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 35px;
+    font-weight: 200;
+}

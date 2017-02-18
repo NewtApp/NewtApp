@@ -5,9 +5,10 @@ body {
   text-align: center;
   background-color: #757575;
   -webkit-background-size: cover;
+  background-size: cover;
 }
 
-background {
+#background {
   height:100%;
   width:100%;
 }

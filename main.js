@@ -4,6 +4,8 @@ var tday = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Fr
 var tmonth = new Array("January", "February", "Marvh", "April", "May", "June", "July", "August", "September", "October", "November", "December");
 toggle = "12h"
 var nameChecked = false
+var wHeight = window.innerHeight
+var wWidth = window.innerWidth
 
 // Check for internet connection
 
@@ -20,9 +22,9 @@ function setBackground() {
     function processRequest(e) {
       if (xhr.readyState == 4) {
         if (xhr.status >= 200 && xhr.status < 304) {
-          $('body').css("background-image","url('https://source.unsplash.com/category/nature/1920x1080/daily')");
+          $('body').css("background","url('https://source.unsplash.com/category/nature/2560x1440/daily') no-repeat center center fixed");
         } else {
-          $('body').css("background-image","url('/assets/wallpaper.jpg')");
+          $('body').css("background","url('/assets/wallpaper.jpg') no-repeat center center fixed");
         }
       }
     }
@@ -118,6 +120,7 @@ window.onload = function(){
         global.name = data
         console.log(global.name)
         if(global.name.name == null || global.name.name == undefined) {
+        
         var name = prompt("What is your name?");
         chrome.storage.sync.set({'name': name})
         chrome.storage.sync.get("name", function(data){
