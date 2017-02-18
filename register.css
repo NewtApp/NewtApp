@@ -3,9 +3,14 @@ html, body {
     visibility: visible;
     background-repeat: no-repeat;
     text-align: center;
-    background-color: #757575;
     -webkit-background-size: cover;
     background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #757575;
 }
 
 body {
@@ -24,21 +29,16 @@ body {
     z-index: -1;
 }
 
-#bgimage {
-    height:100%;
-    width:100%;
-    position: absolute;
-}
-
 #container {
     text-align: center;
     margin-top:50vh;
-    display: inline-block
+    display: inline-block;
 }
 
 #main {
     font-family: 'Roboto', sans-serif;
     font-size: 75px;
+    color: white;
     transform: translateY(-75px);
 }
 
@@ -55,7 +55,7 @@ body {
 
 #inputline {
     color: white;
-    margin-top: -10px;
+    margin-top: -2px;
     width: 50%;
     display: none;
 }
