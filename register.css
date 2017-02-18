@@ -1,13 +1,15 @@
 
 html, body {
-    margin: 0;
-    height: 100%;
+    visibility: visible;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-color: #757575;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
 body {
     text-align: center;
-    background-color: #757575;
-    color: white;
 }
 
 .nomargin {
@@ -19,6 +21,7 @@ body {
     height:100%;
     width:100%;
     position: absolute;
+    z-index: -1;
 }
 
 #bgimage {
@@ -36,13 +39,23 @@ body {
 #main {
     font-family: 'Roboto', sans-serif;
     font-size: 75px;
-    transform: translateY(-75px)
+    transform: translateY(-75px);
 }
 
 #response {
     border: none;
+    text-align: center;
     outline: none;
     background-color: rgba(0, 0, 0, 0);
     font-size: 35px;
+    width: 50%;
     font-weight: 200;
+    color: white;
+}
+
+#inputline {
+    color: white;
+    margin-top: -10px;
+    width: 50%;
+    display: none;
 }

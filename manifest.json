@@ -11,11 +11,12 @@
 	},
 	"default_locale": "en",
 	"chrome_url_overrides": {
-		"newtab": "register.html"
+		"newtab": "index.html"
 	},
-        "permissions": [
+    "permissions": [
           "storage",
 		  "identity",
 		  "https://varvy.com/*"
-        ]
+    ],
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }

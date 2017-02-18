@@ -1,6 +1,5 @@
 body {
   overflow: hidden;
-  visibility: hidden;
   background-repeat: no-repeat;
   text-align: center;
   background-color: #757575;
@@ -9,8 +8,16 @@ body {
 }
 
 #background {
-  height:100%;
-  width:100%;
+    height:100%;
+    width:100%;
+    position: absolute;
+    z-index: -1;
+}
+
+#bgimage {
+    height:100%;
+    width:100%;
+    position: absolute;
 }
 
 ::-webkit-input-placeholder {
@@ -77,6 +84,7 @@ margin: 0;
     display:inline-block;
     width:500px;
     padding:0;
+    visibility: hidden;
 }
 
 .search {
@@ -135,7 +143,6 @@ margin: 0;
 
 #background, #background li {
     position: absolute;
-    z-index: 1;
     top: 0;
     left: 0;
     right: 0;

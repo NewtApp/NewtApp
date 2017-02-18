@@ -22,9 +22,9 @@ function setBackground() {
     function processRequest(e) {
       if (xhr.readyState == 4) {
         if (xhr.status >= 200 && xhr.status < 304) {
-          $('body').css("background","url('https://source.unsplash.com/category/nature/2560x1440/daily') no-repeat center center fixed");
+          $('#background').hide().css("background", "#757575 url('https://source.unsplash.com/category/nature/1920x1080/daily') no-repeat center center fixed").fadeIn(1500);
         } else {
-          $('body').css("background","url('/assets/wallpaper.jpg') no-repeat center center fixed");
+          $('#background').hide().css("background","#757575 url('/assets/wallpaper.jpg') no-repeat center center fixed").fadeIn(1500);
         }
       }
     }
@@ -108,6 +108,7 @@ var something = function() {
 
 // Start loading
 window.onload = function(){
+    setBackground();
     $("#timeToggle").css("visibility","visible");
     $("#timeToggle").hide().fadeIn(1000);
     setTimeout(function(){
@@ -120,19 +121,14 @@ window.onload = function(){
         global.name = data
         console.log(global.name)
         if(global.name.name == null || global.name.name == undefined) {
-        
-        var name = prompt("What is your name?");
-        chrome.storage.sync.set({'name': name})
-        chrome.storage.sync.get("name", function(data){
-            global.name = data
-        })};
+            $( location ).attr("href", "/register.html");
+        };
         console.log("Hello, " + global.name.name + "!")
         getDayTime();
         nameChecked = true;
     });
 
     GetClock();
-    setBackground();
 
     // If time is clicked, change to date
     $("#timeToggle").click(function() {
