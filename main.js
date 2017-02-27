@@ -2,7 +2,10 @@
 global = {}
 var tday = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
 var tmonth = new Array("January", "February", "Marvh", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+var wp = new Array("wallpaper1.jpg", "wallpaper2.jpg", "wallpaper3.jpg", "wallpaper4.jpg", "wallpaper5.jpg", "wallpaper6.jpg", "wallpaper7.jpg", "wallpaper8.jpg", "wallpaper9.jpg", "wallpaper10.jpg", "wallpaper11.jpg", "wallpaper12.jpg", "wallpaper13.jpg", "wallpaper14.jpg", "wallpaper15.jpg")
 toggle = "12h"
+var rwp = Math.floor((Math.random() * 16) + 1) - 1;
+console.log(rwp)
 var nameChecked = false
 var wHeight = window.innerHeight
 var wWidth = window.innerWidth
@@ -11,10 +14,9 @@ var wWidth = window.innerWidth
 
 function setBackground() {
     var xhr = new XMLHttpRequest();
-    var file = "https://varvy.com/pagespeed/wicked-fast.html";
-    var randomNum = Math.round(Math.random() * 10000);
+    var file = "https://www.pexels.com";
  
-    xhr.open('HEAD', file + "?rand=" + randomNum, true);
+    xhr.open('HEAD', file, true);
     xhr.send();
      
     xhr.addEventListener("readystatechange", processRequest, false);
@@ -22,9 +24,9 @@ function setBackground() {
     function processRequest(e) {
       if (xhr.readyState == 4) {
         if (xhr.status >= 200 && xhr.status < 304) {
-          $('#background').hide().css("background", "#757575 url('https://source.unsplash.com/category/nature/1920x1080/daily') no-repeat center center fixed").fadeIn(1500);
+            $('#background').hide().css("background", "#757575 url('https://source.unsplash.com/category/nature/1920x1080/daily') no-repeat center center fixed").fadeIn(1500);
         } else {
-          $('#background').hide().css("background","#757575 url('/assets/wallpaper.jpg') no-repeat center center fixed").fadeIn(1500);
+            $('#background').hide().css("background","#757575 url('/assets/" + wp[rwp] + "') no-repeat center center fixed").fadeIn(1000);
         }
       }
     }

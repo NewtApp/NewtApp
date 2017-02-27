@@ -1,3 +1,7 @@
+var wp = new Array("wallpaper1.jpg", "wallpaper2.jpg", "wallpaper3.jpg", "wallpaper4.jpg", "wallpaper5.jpg", "wallpaper6.jpg", "wallpaper7.jpg", "wallpaper8.jpg", "wallpaper9.jpg", "wallpaper10.jpg", "wallpaper11.jpg", "wallpaper12.jpg", "wallpaper13.jpg", "wallpaper14.jpg", "wallpaper15.jpg")
+toggle = "12h"
+var rwp = (Math.random() * 16) - 1;
+
 window.onload = function() {
 
 $('#response').bind("enterKey",function(e){
@@ -5,7 +9,7 @@ $('#response').bind("enterKey",function(e){
     chrome.storage.sync.set({'name': name})
     $('#container').fadeOut(750)
     setTimeout(function(){
-        $( location ).attr("href", "/index.html");
+        $( location ).attr("href", "chrome://newtab");
     }, 750);
 });
 
@@ -17,7 +21,7 @@ $('#response').keyup(function(e){
 });
 
     $('#main').hide()
-    $('#background').css('background','url(https://source.unsplash.com/category/nature/2560x1440/daily) center center no-repeat fixed')
+    $('#background').css("background", "#757575 url('/assets/" + wp[rwp] + "') no-repeat center center fixed")
     $('#background').hide().fadeIn(1000)
     setTimeout(function(){
         $('#main').html("Hello.").fadeIn(1000)
