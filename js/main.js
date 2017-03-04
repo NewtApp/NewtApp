@@ -1,10 +1,10 @@
 // Set arrays and variables
 global = {}
 var tday = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
-var tmonth = new Array("January", "February", "Marvh", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+var tmonth = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
 var wp = new Array("wallpaper1.jpg", "wallpaper2.jpg", "wallpaper3.jpg", "wallpaper4.jpg", "wallpaper5.jpg", "wallpaper6.jpg", "wallpaper7.jpg", "wallpaper8.jpg", "wallpaper9.jpg", "wallpaper10.jpg", "wallpaper11.jpg", "wallpaper12.jpg", "wallpaper13.jpg", "wallpaper14.jpg", "wallpaper15.jpg")
 toggle = "12h"
-var rwp = Math.floor((Math.random() * 16) + 1) - 1;
+var rwp = Math.floor((Math.random() * 15) + 1) - 1;
 console.log(rwp)
 var nameChecked = false
 var wHeight = window.innerHeight
@@ -26,7 +26,7 @@ function setBackground() {
         if (xhr.status >= 200 && xhr.status < 304) {
             $('#background').hide().css("background", "#757575 url('https://source.unsplash.com/category/nature/1920x1080/daily') no-repeat center center fixed").fadeIn(1500);
         } else {
-            $('#background').hide().css("background","#757575 url('/assets/" + wp[rwp] + "') no-repeat center center fixed").fadeIn(1000);
+            $('#background').hide().css("background","#757575 url('/assets/" + wp[rwp] + "') no-repeat center center fixed").fadeIn(500);
         }
       }
     }
@@ -115,7 +115,7 @@ window.onload = function(){
     $("#timeToggle").hide().fadeIn(1000);
     setTimeout(function(){
         $("#searchbar").css("visibility","visible");
-        $("#searchbar").hide().fadeIn(1000);
+        $("#searchbar").hide().fadeIn(1500);
     }, 500);
 
     // Check if username is saved
@@ -145,7 +145,6 @@ window.onload = function(){
     });
 
     $("#searchicon").click(function() {
-    $(".search").attr('disabled', false)
     $(".search").focus();
     });
 
@@ -162,4 +161,20 @@ window.onload = function(){
 
     // Update time/date every second
     setInterval(whatami, 1000);
-    }
+}
+
+/* Set the width of the side navigation to 250px */
+function openNav() {
+    document.getElementById("navMenu").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("navMenu").style.width = "0";
+}
+
+$('.hover-me').mouseover(function(){
+    console.log("TRIGGERED!")
+});
+$("#lmenu").mouseleave(function(){ $(this).hide(); })
+
