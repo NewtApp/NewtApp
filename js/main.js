@@ -14,7 +14,7 @@ var wWidth = window.innerWidth
 
 function setBackground() {
     var xhr = new XMLHttpRequest();
-    var file = "https://www.pexels.com";
+    var file = "https://unsplash.com";
  
     xhr.open('HEAD', file, true);
     xhr.send();
@@ -24,7 +24,7 @@ function setBackground() {
     function processRequest(e) {
       if (xhr.readyState == 4) {
         if (xhr.status >= 200 && xhr.status < 304) {
-            $('#background').hide().css("background", "#757575 url('https://source.unsplash.com/category/nature/1920x1080/daily') no-repeat center center fixed").fadeIn(1500);
+            $('#background').hide().css("background", "#757575 url('https://unsplash.it/1920/1080/?gravity=south') no-repeat center center fixed").fadeIn(1500);
         } else {
             $('#background').hide().css("background","#757575 url('/assets/" + wp[rwp] + "') no-repeat center center fixed").fadeIn(500);
         }
@@ -172,9 +172,4 @@ function openNav() {
 function closeNav() {
     document.getElementById("navMenu").style.width = "0";
 }
-
-$('.hover-me').mouseover(function(){
-    console.log("TRIGGERED!")
-});
-$("#lmenu").mouseleave(function(){ $(this).hide(); })
 
