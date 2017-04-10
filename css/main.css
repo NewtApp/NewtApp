@@ -7,6 +7,36 @@ body {
   background-size: cover;
 }
 
+#settings {
+    padding: 12px;
+    text-align: left;
+    position: absolute;
+}
+
+#settingMenu {
+    height: 250px;
+    width: 100px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: grey;
+    display:none;
+}
+
+#settingOptions{
+    padding:10px;
+}
+
+#settingIcon {
+    -webkit-transition: -webkit-transform .65s ease-in-out;
+    transition: transform .65s ease-in-out;  
+    -webkit-transition: -webkit-transform .65s ease-in-out;
+}
+
+#settingIcon:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 #background {
     height:100%;
     width:100%;

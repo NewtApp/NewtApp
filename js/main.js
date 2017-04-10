@@ -5,10 +5,10 @@ var tmonth = new Array("January", "February", "March", "April", "May", "June", "
 var wp = new Array("wallpaper1.jpg", "wallpaper2.jpg", "wallpaper3.jpg", "wallpaper4.jpg", "wallpaper5.jpg", "wallpaper6.jpg", "wallpaper7.jpg", "wallpaper8.jpg", "wallpaper9.jpg", "wallpaper10.jpg", "wallpaper11.jpg", "wallpaper12.jpg", "wallpaper13.jpg", "wallpaper14.jpg", "wallpaper15.jpg")
 toggle = "12h"
 var rwp = Math.floor((Math.random() * 15) + 1) - 1;
-console.log(rwp)
 var nameChecked = false
 var wHeight = window.innerHeight
 var wWidth = window.innerWidth
+var sToggle = false
 
 // Check for internet connection
 
@@ -24,12 +24,16 @@ function setBackground() {
     function processRequest(e) {
       if (xhr.readyState == 4) {
         if (xhr.status >= 200 && xhr.status < 304) {
-            $('#background').hide().css("background", "#757575 url('https://unsplash.it/1920/1080/?gravity=south') no-repeat center center fixed").fadeIn(1500);
+            $('#background').hide().css("background", "#757575 url('https://source.unsplash.com/collection/402984/1920x1080/daily') no-repeat center center fixed").fadeIn(1500);
         } else {
             $('#background').hide().css("background","#757575 url('/assets/" + wp[rwp] + "') no-repeat center center fixed").fadeIn(500);
         }
       }
     }
+}
+
+function toggleSettings() {
+    
 }
 
 // Find if it's Morning, afternoon or evening
@@ -113,6 +117,7 @@ window.onload = function(){
     setBackground();
     $("#timeToggle").css("visibility","visible");
     $("#timeToggle").hide().fadeIn(1000);
+    $("#settingIcon").hide().fadeIn(1000);
     setTimeout(function(){
         $("#searchbar").css("visibility","visible");
         $("#searchbar").hide().fadeIn(1500);
@@ -144,6 +149,19 @@ window.onload = function(){
         }
     });
 
+    // If Settings button is clicked, do action
+
+    $("#settingIcon").click(function() {
+        if (sToggle == false) {
+            $("#settingMenu").css("visibility","visible").hide().fadeIn(500);
+            sToggle = true
+        }
+        else {
+            $("#settingMenu").fadeOut(500);
+            sToggle = false
+        }
+    });
+
     $("#searchicon").click(function() {
     $(".search").focus();
     });
@@ -163,13 +181,4 @@ window.onload = function(){
     setInterval(whatami, 1000);
 }
 
-/* Set the width of the side navigation to 250px */
-function openNav() {
-    document.getElementById("navMenu").style.width = "250px";
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-    document.getElementById("navMenu").style.width = "0";
-}
 
