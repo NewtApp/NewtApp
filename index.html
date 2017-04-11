@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>NewT(ab)</title>
-	<script src="js/jquery-3.1.1.js"></script>
-	<script src="js/main.js"></script>
-	<link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-	<ul id="background" class="nomargin"></ul>	
-	<div id="settings">
-	<img class="fa fa-refresh fa-2x fa-spin-hover" id="settingIcon" src="/assets/settings.svg">
-	<div id="settingMenu"><div id="settingOptions"><a href"">Configuration</a><a href"">Settings</a><a href"">Our Data</a><a href"">About</a></div></div></div>
-	<div><div id="time" class="noselect">
-		<div id="timeToggle">
-			<div id="timeText"></div>
-			<div id="dayText"></div>
-		</div>
-	</div>
-	<div>
-      <form class="unselectable" method="get" action="https://www.google.com/search">
-        <div id="searchbar" class="unselectable">
-          <input type="text" name="q" size="100" placeholder="Good day, User!" class="search nomargin" autocomplete="off">
-					<img src="assets/search.png" id="searchicon">
-					<hr class="inputline">
+  <head>
+    <title>NewT(ab)</title>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <ul id="background" class="nomargin"></ul>
+    <div id="settings">
+      <img class="fa fa-refresh fa-2x fa-spin-hover" id="settingIcon" src="/assets/settings.svg">
+      <div id="settingMenu">
+						<a href"">Configuration</a>
+						<a href"">Settings</a>
+						<a href"">Our Data</a>
+						<a href"">About</a>
+      </div>
+    </div>
+    <div>
+      <div id="time" class="noselect">
+        <div id="timeToggle">
+          <div id="timeText"></div>
+          <div id="dayText"></div>
         </div>
-      </form>
-	</div>
-	</div>
-	<aside class="bar hover-me"></aside>
-</body>
+      </div>
+      <div>
+        <form class="unselectable" method="get" action="https://www.google.com/search">
+          <div id="searchbar" class="unselectable">
+            <input type="text" name="q" size="100" placeholder="Good day, User!" class="search nomargin" autocomplete="off">
+            <img src="assets/search.png" id="searchicon">
+            <hr class="inputline">
+          </div>
+        </form>
+      </div>
+    </div>
+    <aside class="bar hover-me"></aside>
+  </body>
 </html>
